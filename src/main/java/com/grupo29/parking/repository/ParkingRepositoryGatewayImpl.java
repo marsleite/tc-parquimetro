@@ -6,6 +6,7 @@ import com.grupo29.parking.repository.spring.ParkingRepositorySpring;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Component
 public class ParkingRepositoryGatewayImpl implements ParkingRepositoryGateway {
@@ -33,5 +34,10 @@ public class ParkingRepositoryGatewayImpl implements ParkingRepositoryGateway {
     }
 
     return null;
+  }
+
+  @Override
+  public List<Estacionamento> findAllPark(String placa) {
+    return parkingRepositorySpring.findAll();
   }
 }
