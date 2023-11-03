@@ -4,3 +4,10 @@ spring:
       host: localhost
       port: 27017
       database: techParkingDB
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    cache-names: parkingCache
+    redis:
+      time-to-live: 7200000 # 2 horas em milissegundos
