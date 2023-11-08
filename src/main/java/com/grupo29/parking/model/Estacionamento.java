@@ -1,5 +1,7 @@
 package com.grupo29.parking.model;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +22,7 @@ public class Estacionamento {
 
   @Id
   private String id;
+  @NotBlank(message = "A placa não deve estar em branco")
   private String placa;
   private LocalDateTime horaEntrada;
   private LocalDateTime horaSaida;
